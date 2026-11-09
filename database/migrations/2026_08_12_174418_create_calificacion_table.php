@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('calificacion', 5, 2)->nullable();
             $table->decimal('calificacion_propuesta', 5, 2)->nullable();
             $table->enum('status', ['aprobado', 'pendiente', 'rechazado'])->default('aprobado');
-            $table->boolean('periodo')->default('2026-1');
+            $table->string('periodo')->default('2026-1');
             $table->string('exam_tipo')->default('ORD');
             $table->boolean('is_unlocked')->default(false);
             $table->timestamps();
