@@ -81,7 +81,7 @@
                             @if (Route::has('login'))
                                 <a href="{{ route('login') }}"
                                    class="btn rounded-lg bg-[#1D3FD1] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1631A8]">
-                                    Iniciar sesión
+                                    Iniciar sesión.
                                 </a>
                             @endif
 
