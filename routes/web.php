@@ -42,6 +42,8 @@ Route::middleware(['auth:sanctum', config ('jetstream.auth_session'),'verified',
     Route::patch('admin/calificaciones/{id}/aprobar', [AdminController::class, 'aprobarCalificacion'])->name('admin.calificaciones.aprobar');
     Route::patch('admin/calificaciones/{id}/rechazar', [AdminController::class, 'rechazarCalificacion'])->name('admin.calificaciones.rechazar');
     Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-    Route::resource('materias', MateriaController::class);
+    Route::resource('materias', MateriaController::class)->names([
+        'index' => 'alumno.materias',
+    ]);
 });
 });
