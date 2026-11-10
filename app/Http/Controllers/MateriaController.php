@@ -10,7 +10,7 @@ class MateriaController extends Controller
     public function index()
     {
         $materias = Materias::paginate(10);
-        return view('materias.index', compact('materias'));
+        return view('materia.index', compact('materia'));
     }
 
     // Formulario para crear materia
