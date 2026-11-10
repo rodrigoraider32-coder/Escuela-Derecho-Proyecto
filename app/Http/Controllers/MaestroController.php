@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Calificacion;
 use App\Models\User;
-use App\Models\Materias;
+use App\Models\Materia;
 use Illuminate\Support\Facades\Auth;
 
 class MaestroController extends Controller
 {
     public function capturar()
     {
-        $materias = Materias::all();
+        $materias = Materia::all();
         $alumnos = User::where('role', 'alumno')->get();
         $misSolicitudes = Calificacion::where('teacher_id', Auth::id())
         ->with('student', 'materia')
