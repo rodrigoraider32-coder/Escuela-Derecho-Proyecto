@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Materias;
 use Illuminate\Http\Request;
 
-class MateriaController extends Controller
+class MateriasController extends Controller
 {
-    // Mostrar la lista de materias
     public function index()
     {
         $materias = Materias::paginate(10);
@@ -37,26 +36,26 @@ class MateriaController extends Controller
     // Formulario para editar materia
     public function edit(Materias $materia)
     {
-        return view('materias.edit', compact('materia'));
+        return view('materias.edit', compact('materias'));
     }
 
     // Actualizar materia en la BD
-    public function update(Request $request, Materias $materia)
+    public function update(Request $request, Materias $materias)
     {
         $request->validate([
             'nombre' => 'required|string|max:255',
-            'clave'  => 'required|string|unique:materias,clave,' . $materia->id,
+            'clave'  => 'required|string|unique:materias,clave,' . $materias->id,
         ]);
 
-        $materia->update($request->all());
+        $materias->update($request->all());
 
         return redirect()->route('materias.index')->with('success', 'Materia actualizada correctamente.');
     }
 
     // Eliminar materia
-    public function destroy(Materias $materia)
+    public function destroy(Materias $materias)
     {
-        $materia->delete();
+        $materias->delete();
 
         return redirect()->route('materias.index')->with('success', 'Materia eliminada.');
     }
