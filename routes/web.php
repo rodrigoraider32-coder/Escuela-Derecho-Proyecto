@@ -9,8 +9,7 @@ use App\Http\Controllers\TicketController;
 use App\Http\Controllers\MaestroController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PaymentController;
-#use App\Http\Controllers\MateriaController;
-
+use App\Http\Controllers\MateriaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,4 +52,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     })->name('pagos.index');
     Route::get('/pagos/exito', [PaymentController::class, 'success'])->name('payments.success');
     Route::get('/pagos/cancelado', [PaymentController::class, 'cancel'])->name('payments.cancel');
+    
+    Route::resource('materias', MateriaController::class);
+
 });

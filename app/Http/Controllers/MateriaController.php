@@ -2,61 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Materias;
+use App\Models\Materia;
 use Illuminate\Http\Request;
 
-class MateriasController extends Controller
+class MateriaController extends Controller
 {
     public function index()
     {
-        $materias = Materias::paginate(10);
+        $materias = Materia::latest()->paginate(10);
         return view('materias.index', compact('materias'));
     }
 
-    // Formulario para crear materia
     public function create()
     {
         return view('materias.create');
     }
 
-    // Guardar una nueva materia en la BD
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required|string|max:255',
-            'clave'  => 'required|string|unique:materias,clave',
-            // Agreguen aquí las validaciones adicionales (créditos, etc.)
+            'nombre' => 'required|string|min:3|max:100',
+            'clave' => 'required|string|max:20|unique:materias,clave',
+            'creditos' => 'required|integer|min:1',
         ]);
 
-        Materias::create($request->all());
+        Materia::create($request->all());
 
         return redirect()->route('materias.index')->with('success', 'Materia registrada correctamente.');
     }
 
-    // Formulario para editar materia
-    public function edit(Materias $materia)
+    public function edit(Materia $materia)
     {
-        return view('materias.edit', compact('materias'));
+        return view('materias.edit', compact('materia'));
     }
 
-    // Actualizar materia en la BD
-    public function update(Request $request, Materias $materias)
+    public function update(Request $request, Materia $materia)
     {
         $request->validate([
-            'nombre' => 'required|string|max:255',
-            'clave'  => 'required|string|unique:materias,clave,' . $materias->id,
+            'nombre' => 'required|string|min:3|max:100',
+            'clave' => 'required|string|max:20|unique:materias,clave,' . $materia->id,
+            'creditos' => 'required|integer|min:1',
         ]);
 
-        $materias->update($request->all());
+        $materia->update($request->all());
 
         return redirect()->route('materias.index')->with('success', 'Materia actualizada correctamente.');
     }
 
-    // Eliminar materia
-    public function destroy(Materias $materias)
+    public function destroy(Materia $materia)
     {
-        $materias->delete();
-
-        return redirect()->route('materias.index')->with('success', 'Materia eliminada.');
+        $materia->delete();
+        return redirect()->route('materias.index')->with('success', 'Materia eliminada correctamente.');
     }
-}  
+}

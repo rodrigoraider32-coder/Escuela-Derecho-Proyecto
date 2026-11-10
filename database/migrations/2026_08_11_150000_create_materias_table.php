@@ -6,24 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('code');
-            $table->integer('semestre');
-            $table->foreignId('carrera_id')->constrained()->onDelete('cascade');
+            $table->string('clave')->unique();
+            $table->integer('creditos')->default(0);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('materias');
