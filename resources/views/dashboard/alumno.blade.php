@@ -73,7 +73,7 @@
                                 </div>
                                 <p class="text-slate-500 text-xs mt-1">Alta y registro de materias escolares.</p>
                             </div>
-                            <button disabled class="mt-4 w-full bg-slate-200 text-slate-400 font-semibold py-2 rounded-xl text-xs cursor-not-allowed">
+                            <button disabled class="mt-4 w-full bg-slate-200 text-slate-400 font-semibold py-2 rounded-xl text-xs cursor-allowed">
                                 Próximamente
                             </button>
                         </div>
