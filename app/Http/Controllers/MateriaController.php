@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Materias;
 use Illuminate\Http\Request;
 
-class MateriasController extends Controller
+class MateriaController extends Controller
 {
     public function index()
     {
