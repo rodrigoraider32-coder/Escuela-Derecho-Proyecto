@@ -48,6 +48,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     })->name('pagos.index');
     Route::get('/pagos/exito', [PaymentController::class, 'success'])->name('payments.success');
     Route::get('/pagos/cancelado', [PaymentController::class, 'cancel'])->name('payments.cancel');
-
+    
     Route::resource('materias', MateriaController::class);
+
 });
