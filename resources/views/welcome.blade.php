@@ -70,7 +70,7 @@
 
                 <section class="flex-1">
                     <h1 class="rise d1 text-4xl font-bold leading-tight tracking-tight text-[#1D3FD1] sm:text-5xl">
-                        Arma tu horario y elige mejor a tus profesores
+                        Arma tu horario y elige mejor a tus profesores solo aqui.
                     </h1>
                     <p class="rise d2 mt-4 max-w-md text-base leading-relaxed text-[#3A4A8C]">
                         Crea tu horario de clases en minutos y consulta las evaluaciones de otros estudiantes antes de inscribirte.
