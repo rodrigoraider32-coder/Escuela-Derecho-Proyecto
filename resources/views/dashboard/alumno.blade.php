@@ -114,6 +114,11 @@
                             <button class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors">
                                 Realizar Pago
                             </button>
+                            <span class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors">Pendiente</span>
+                            <a href="{{ route('pagos.index') }}" 
+                                class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors inline-block">
+                                    Realizar Pago
+                            </a>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded-xl">
