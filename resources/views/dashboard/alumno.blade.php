@@ -10,6 +10,7 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
+                <!-- Columna Izquierda: Perfil del Alumno -->
                 <div class="lg:col-span-1 bg-white rounded-2xl shadow-md p-6 border border-slate-100 flex flex-col justify-between h-full">
                     <div>
                         <div class="flex flex-col items-center text-center pb-6 border-b border-slate-100">
@@ -47,8 +48,11 @@
                     </div>
                 </div>
 
+                <!-- Columna Derecha: Tarjetas de Acceso -->
                 <div class="lg:col-span-3 space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- Tarjeta Calificaciones -->
                         <div class="bg-white rounded-2xl shadow-md p-5 border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-shadow">
                             <div>
                                 <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
@@ -62,22 +66,24 @@
                             </a>
                         </div>
 
-                        <div class="bg-slate-50 rounded-2xl border border-dashed border-slate-300 p-5 flex flex-col justify-between">
+                        <!-- Tarjeta Materias (Activada) -->
+                        <div class="bg-white rounded-2xl shadow-md p-5 border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-shadow">
                             <div>
                                 <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center mb-3">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <h4 class="font-bold text-slate-700 text-base">Materias</h4>
-                                    <span class="text-[10px] bg-amber-100 text-amber-700 font-semibold px-2 py-0.5 rounded">Pendiente</span>
+                                    <h4 class="font-bold text-slate-800 text-base">Materias</h4>
+                                    <span class="text-[10px] bg-emerald-100 text-emerald-700 font-semibold px-2 py-0.5 rounded">Activo</span>
                                 </div>
                                 <p class="text-slate-500 text-xs mt-1">Alta y registro de materias escolares.</p>
                             </div>
-                            <button disabled class="mt-4 w-full bg-slate-200 text-slate-400 font-semibold py-2 rounded-xl text-xs cursor-not-allowed">
-                                Próximamente
-                            </button>
+                            <a href="{{ route('alumno.materias') }}" class="mt-4 text-center bg-amber-50 text-amber-600 hover:bg-amber-100 font-semibold py-2 rounded-xl text-xs transition-colors">
+                                Ver Materias
+                            </a>
                         </div>
 
+                        <!-- Tarjeta Tickets -->
                         <div class="bg-white rounded-2xl shadow-md p-5 border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-shadow">
                             <div>
                                 <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
@@ -93,8 +99,9 @@
 
                     </div>
 
+                    <!-- Sección de Método de Pago e Información Financiera -->
                     <div class="bg-white rounded-2xl shadow-md p-6 border border-slate-100">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                        <div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-slate-100 pb-4 mb-4 gap-4">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
@@ -104,8 +111,7 @@
                                     <p class="text-slate-500 text-xs">Administra tus pagos colegiales, inscripciones y referencias</p>
                                 </div>
                             </div>
-                            <span class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors">Pendiente</span>
-                            <button disabled class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors">
+                            <button class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2 rounded-xl text-xs transition-colors">
                                 Realizar Pago
                             </button>
                         </div>
