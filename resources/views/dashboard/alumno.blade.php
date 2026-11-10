@@ -78,7 +78,7 @@
                                 </div>
                                 <p class="text-slate-500 text-xs mt-1">Alta y registro de materias escolares.</p>
                             </div>
-                            <a href="{{ route('alumno.materias') }}" class="mt-4 text-center bg-amber-50 text-amber-600 hover:bg-amber-100 font-semibold py-2 rounded-xl text-xs transition-colors">
+                            <a href="{{ url('alumno.materias') }}" class="mt-4 text-center bg-amber-50 text-amber-600 hover:bg-amber-100 font-semibold py-2 rounded-xl text-xs transition-colors">
                                 Ver Materias
                             </a>
                         </div>
