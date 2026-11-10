@@ -34,6 +34,6 @@ class Calificacion extends Model
 
     public function materia()
     {
-        return $this->belongsTo(Materias::class, 'materia_id');
+        return $this->belongsTo(Materia::class, 'materia_id');
     }
 }
