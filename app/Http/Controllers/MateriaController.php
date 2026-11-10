@@ -25,7 +25,6 @@ class MateriasController extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'clave'  => 'required|string|unique:materias,clave',
-            // Agreguen aquí las validaciones adicionales (créditos, etc.)
         ]);
 
         Materias::create($request->all());
@@ -36,27 +35,27 @@ class MateriasController extends Controller
     // Formulario para editar materia
     public function edit(Materias $materia)
     {
-        return view('materias.edit', compact('materias'));
+        return view('materias.edit', compact('materia'));
     }
 
     // Actualizar materia en la BD
-    public function update(Request $request, Materias $materias)
+    public function update(Request $request, Materias $materia)
     {
         $request->validate([
             'nombre' => 'required|string|max:255',
-            'clave'  => 'required|string|unique:materias,clave,' . $materias->id,
+            'clave'  => 'required|string|unique:materias,clave,' . $materia->id,
         ]);
 
-        $materias->update($request->all());
+        $materia->update($request->all());
 
         return redirect()->route('materias.index')->with('success', 'Materia actualizada correctamente.');
     }
 
     // Eliminar materia
-    public function destroy(Materias $materias)
+    public function destroy(Materias $materia)
     {
-        $materias->delete();
+        $materia->delete();
 
         return redirect()->route('materias.index')->with('success', 'Materia eliminada.');
     }
-}  
+}
