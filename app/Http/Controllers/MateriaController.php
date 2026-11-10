@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Materias;
+use App\Models\Materias; // <-- Esta línea es vital
 use Illuminate\Http\Request;
 
 class MateriaController extends Controller
