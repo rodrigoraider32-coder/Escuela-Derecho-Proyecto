@@ -131,18 +131,8 @@
                         <ellipse cx="74" cy="226" rx="13" ry="6" fill="#0F1F5C" />
                         <ellipse cx="126" cy="226" rx="13" ry="6" fill="#0F1F5C" />
 
-<<<<<<< HEAD
-                <section class="flex-1">
-                    <h1 class="rise d1 text-4xl font-bold leading-tight tracking-tight text-[#1D3FD1] sm:text-5xl">
-                        Arma tu horario y elige mejor a tus profesores solo aqui.
-                    </h1>
-                    <p class="rise d2 mt-4 max-w-md text-base leading-relaxed text-[#3A4A8C]">
-                        Crea tu horario de clases en minutos y consulta las evaluaciones de otros estudiantes antes de inscribirte.
-                    </p>
-=======
                         <path d="M40 150 L22 170" stroke="#1D3FD1" stroke-width="8" stroke-linecap="round" />
                         <path class="mascot-arm" d="M160 150 L180 126" stroke="#1D3FD1" stroke-width="8" stroke-linecap="round" />
->>>>>>> materias_marquitos
 
                         <rect x="150" y="36" width="14" height="164" rx="5" fill="#CFE0FF" />
                         <rect x="38" y="28" width="122" height="176" rx="16" fill="#1D3FD1" />
@@ -333,7 +323,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-[#0b132b] text-white py-8 border-t border-blue-900/40 text-center text-xs text-slate-400 mt-12">
+    <footer class="bg-[#0b132b] text-white py-8 border-t border-blue-900/40 text-center text-xs mt-12">
         <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p>&copy; {{ date('Y') }} Aulia UNAM. Todos los derechos reservados.</p>
             <div class="flex gap-4 text-slate-300">
